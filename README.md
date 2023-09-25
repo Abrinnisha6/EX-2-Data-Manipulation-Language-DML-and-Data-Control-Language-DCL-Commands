@@ -24,8 +24,11 @@ INSERT: It is used to insert data into a table.
 ## SQL QUERY :
 
 insert into employee1 values('nisha',19,'AI&DS');
+
 insert into employee1 values('brindha',19,'AI&DS');
+
 insert into employee1 values('yogi',18,'AI&DS');
+
 insert into employee1 values('pavi',18,'AI&DS');
 
 ## OUTPUT :

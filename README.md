@@ -11,7 +11,9 @@ DDL or Data Definition Language actually consists of the SQL commands that can b
 ## List of DDL commands :
 
 INSERT : The insert command is used for inserting one or more rows into a database table with specified table column values. 
+
 UPDATE : The UPDATE command in SQL is used to modify or change the existing records in a table. If we want to update a particular value, we use the WHERE clause along with the UPDATE clause. If you do not use the WHERE clause, all the rows will be affected.
+
 DELETE : SQL is a part of the Data Manipulation Language, a sub-language of SQL that allows modification of data in databases. This command is used to delete existing records from a table.
 
 

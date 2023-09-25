@@ -62,7 +62,7 @@ DELETE FROM employee1 WHERE name='mercy';
 
 ## RESULT :
 
-Thus the all the queries got the output.
+Thus the all the queries got the output and statifies the given question.
 
 
 

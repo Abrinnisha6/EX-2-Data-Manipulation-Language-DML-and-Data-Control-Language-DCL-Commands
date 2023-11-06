@@ -44,6 +44,7 @@ annualsalary = annualsalary + (annualsalary * 0.10);
 ### OUTPUT :
 
 ![image](https://github.com/Abrinnisha6/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/118889454/093e49fe-14fd-494e-9d66-ce119e3f05fa)
+
 ### Q2) Delete the records from manager table where the salary less than 2750.
 ### QUERY :
 ```
@@ -52,6 +53,7 @@ DELETE FROM manager WHERE salary < 2750;
 ### OUTPUT :
 
 ![image](https://github.com/Abrinnisha6/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/118889454/30f98df0-d3a0-423f-af3d-0cf6ba8c82db)
+
 ### Q3) Display each name of the employee as “Name” and annual salary as “Annual Salary” (Note: Salary in emp table is the monthly salary)
 ### QUERY :
 ```

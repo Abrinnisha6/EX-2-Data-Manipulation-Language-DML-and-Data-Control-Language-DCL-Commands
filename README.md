@@ -1,5 +1,7 @@
 # EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands
 
+## DATE : 10/08/23
+
 ## AIM :
 
 To create a database and execute DDL queries using SQL.
@@ -15,14 +17,15 @@ INSERT : The insert command is used for inserting one or more rows into a databa
 UPDATE : The UPDATE command in SQL is used to modify or change the existing records in a table. If we want to update a particular value, we use the WHERE clause along with the UPDATE clause. If you do not use the WHERE clause, all the rows will be affected.
 
 DELETE : SQL is a part of the Data Manipulation Language, a sub-language of SQL that allows modification of data in databases. This command is used to delete existing records from a table.
-## Create the table as given below:
+
+## Create the table as given below :
 ```
 create table manager(enumber number(6),ename char(15),
 salary number(5),commission number(4),
 annualsalary number(7),Hiredate date,designation char(10),
 deptno number(2),reporting char(10));
 ```
-## Insert the following values into the table:
+## Insert the following values into the table :
 ```
 insert into manager values(7369,'Dharsan',2500,500,30000,
 '30-June-81','clerk',10,'John');
@@ -34,115 +37,115 @@ insert into manager values(7788,'Vikash',4000,0,48000,
 '12-Aug-82','clerk',50,'Bond');
 ```
 ## Q1) Update all the records of manager table by increasing 10% of their salary as bonus.
-## QUERY:
+## QUERY :
 ```
 UPDATE manager
 SET salary = salary + (salary * 0.10),
 annualsalary = annualsalary + (annualsalary * 0.10);
 ```
-## OUTPUT:
+## OUTPUT :
 
 ![image](https://github.com/Abrinnisha6/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/118889454/093e49fe-14fd-494e-9d66-ce119e3f05fa)
 ## Q2) Delete the records from manager table where the salary less than 2750.
-## QUERY:
+## QUERY :
 ```
 DELETE FROM manager WHERE salary < 2750;
 ```
-## OUTPUT:
+## OUTPUT :
 
 ![image](https://github.com/Abrinnisha6/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/118889454/30f98df0-d3a0-423f-af3d-0cf6ba8c82db)
 ## Q3) Display each name of the employee as “Name” and annual salary as “Annual Salary” (Note: Salary in emp table is the monthly salary)
-## QUERY:
+## QUERY :
 ```
 SELECT ename AS "Name", salary * 12 AS "Annual Salary"
 FROM manager;
 ```
-## OUTPUT:
+## OUTPUT :
 ![image](https://github.com/Abrinnisha6/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/118889454/148fcdbf-3956-4ab5-95f5-bc33effb7ac4)
 
 ## Q5) List the names of Clerks from emp table.
-## QUERY:
+## QUERY :
 ```
 SELECT ename from manager where designation='clerk';
 ```
-## OUTPUT:
+## OUTPUT :
 ![image](https://github.com/Abrinnisha6/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/118889454/c26bd95a-f247-46b0-ba87-21410acfc861)
 
 ## Q6) List the names of employee who are not Managers.
-## QUERY:
+## QUERY :
 ```
 SELECT ename from manager where designation!='manager';
 ```
-## OUTPUT:
+## OUTPUT :
 ![image](https://github.com/Abrinnisha6/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/118889454/18f59582-4d4d-438f-a5af-69e7773c1aaa)
 
 ## Q7) List the names of employees not eligible for commission.
-## QUERY:
+## QUERY :
 ```
 SELECT ename from manager where commission=0;
 ```
-## OUTPUT:
+## OUTPUT :
 ![image](https://github.com/Abrinnisha6/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/118889454/d50396bc-cb6b-4c99-bb41-03b8b330ea7b)
 
 ## Q8) List employees whose name either start or end with ‘s’.
-## QUERY:
+## QUERY :
 ```
 SELECT ename
 FROM manager
 WHERE ename LIKE 'S%' OR ename LIKE '%s';
 ```
-## OUTPUT:
+## OUTPUT :
 ![image](https://github.com/Abrinnisha6/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/118889454/4e4b6f6d-57f3-4bc5-bd24-a4b0283252eb)
 
 ## Q9) Sort emp table in ascending order by hire-date and list ename, job, deptno and hire-date.
-## QUERY:
+## QUERY :
 ```
 select ename,designation,deptno,Hiredate from manager
 order by Hiredate asc;
 ```
-## OUTPUT:
+## OUTPUT :
 ![image](https://github.com/Abrinnisha6/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/118889454/c29a9d32-55d4-4b2c-ac11-628ec30bdd59)
 
 ## Q10) List the Details of Employees who have joined before 30 Sept 81.
-## QUERY:
+## QUERY :
 ```
 SELECT *
 FROM manager
 WHERE Hiredate < TO_DATE('1981-09-30', 'YYYY-MM-DD');
 ```
-## OUTPUT:
+## OUTPUT :
 ![image](https://github.com/Abrinnisha6/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/118889454/802677ae-6940-44f9-8f09-d794230cfca3)
 
 ## Q11) List ename, deptno and sal after sorting emp table in ascending order by deptno and then descending order by sal.
-## QUERY:
+## QUERY :
 ```
 select ename,deptno,salary from manager order by deptno asc;
 select ename,deptno,salary from manager order by salary desc;
 ```
-## OUTPUT:
+## OUTPUT :
 
 ![image](https://github.com/Abrinnisha6/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/118889454/1b3cce1b-5886-4459-8782-885d2a2d9b33)
 
 ![image](https://github.com/Abrinnisha6/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/118889454/4b7a668a-3fa8-4ebc-9c70-dd446783c1d1)
 
 ## Q12) List the names of employees not belonging to dept no 30,40 & 10
-## QUERY:
+## QUERY :
 ```
 select ename from manager where deptno not in (10,30,40);
 ```
-## OUTPUT:
+## OUTPUT :
 ![image](https://github.com/Abrinnisha6/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/118889454/9f20ecbb-f12c-4767-ae5f-f1bf2ee18d90)
 
 ## Q13) Find number of rows in the table EMP
-## QUERY:
+## QUERY :
 ```
 select count(*) from manager;
 ```
-## OUTPUT:
+## OUTPUT :
 ![image](https://github.com/Abrinnisha6/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/118889454/764a9b58-aa1e-4a1d-acd5-2f18dc629fd1)
 
 ## Q14) Find maximum, minimum and average salary in EMP table.
-## QUERY:
+## QUERY :
 ```
 select ename ,salary,annualsalary from manager
 where salary = (select max(salary) from manager);
@@ -152,7 +155,7 @@ where salary = (select min(salary) from manager);
 
 select avg(salary) from manager;
 ```
-## OUTPUT:
+## OUTPUT :
 
 ![image](https://github.com/Abrinnisha6/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/118889454/06bff0bb-fa36-42e5-86e2-fea412afabb9)
 
@@ -161,18 +164,19 @@ select avg(salary) from manager;
 ![image](https://github.com/Abrinnisha6/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/118889454/3487b3f5-ca85-4475-b1ba-d87236fcba64)
 
 ## Q15) List the jobs and number of employees in each job. The result should be in the descending order of the number of employees.
-## QUERY:
+## QUERY :
 ```
 SELECT designation, COUNT(*) AS "Number of Employees"
 FROM manager
 GROUP BY designation
 ORDER BY COUNT(*) DESC;
 ```
-## OUTPUT:
+## OUTPUT :
 
 ![image](https://github.com/Abrinnisha6/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/118889454/4a0d6bc8-27ec-4984-8d07-7e40d40a87b1)
 
-## RESULT:
+## RESULT :
+
 Thus, Manager database is created and DML queries such as insertion, updation, deletion are executed using SQL.
 
 
